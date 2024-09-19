@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 import axios from 'axios';
 import Image from './ImageDisplay';
+import Products from "./Products";
 
 // This Component is a child Component of Customers Component
 export default class CustomerDetails extends Component {
@@ -45,6 +46,12 @@ export default class CustomerDetails extends Component {
               <p>Picture: {customerDetails.picture}</p>
               {/* Ajoutez d'autres détails du client ici */}
               <Image width='200' height='200' imageName={customerDetails.picture}></Image>
+              <Products
+                name="temitope"
+                description="the product has fantastic features"
+              // here price is not passed to the component to show the default value
+              // price={1000}
+              />
             </div>
           ) : (
             <p>Loading...</p>
