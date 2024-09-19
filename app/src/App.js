@@ -18,6 +18,7 @@ class App extends Component {
             <h1 className="App-title">Simple React App</h1>
           </header>
           <Routes>
+            {/* force la redirection vers /customerlist */}
             <Route path="/" element={<Navigate to="/customerlist" />} />
             <Route path="/customerlist" element={<Customers />} />
           </Routes>

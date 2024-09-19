@@ -8,5 +8,6 @@
 	"country": "India",
 	"organization": "Company 3",
 	"jobProfile": "Software Developer",
-	"additionalInfo": "Buys Lots of Products in general"
+  "additionalInfo": "Buys Lots of Products in general",
+  "picture": "customer3.jpg"
 }
