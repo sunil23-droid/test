@@ -1,32 +1,14 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 class ImageDisplay extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      imageName: ''
-    };
-  }
-
-  componentDidMount() {
-    this.fetchImageName();
-  }
-
-  fetchImageName() {
-    axios.get('assets/imageData.json')
-      .then(response => {
-        this.setState({ imageName: response.data.imageName });
-      })
-      .catch(error => {
-        console.error('Error fetching the image name:', error);
-      });
+    console.log(props);
   }
 
   render() {
-    const { width, height } = this.props;
-    const { imageName } = this.state;
-    const imageUrl = `${process.env.PUBLIC_URL}/assets/${imageName}`;
+    const { width, height, imageName } = this.props;
+    const imageUrl = `${process.env.PUBLIC_URL}/assets/img/${imageName}`;
 
     return (
       <div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 import axios from 'axios';
+import Image from './ImageDisplay';
 
 // This Component is a child Component of Customers Component
 export default class CustomerDetails extends Component {
@@ -33,7 +34,6 @@ export default class CustomerDetails extends Component {
 
   render() {
     const { customerDetails } = this.state;
-
     return (
       <Card>
         <Card.Header>Customer Details</Card.Header>
@@ -42,7 +42,9 @@ export default class CustomerDetails extends Component {
             <div>
               <p>Name: {customerDetails.name}</p>
               <p>Email: {customerDetails.email}</p>
+              <p>Picture: {customerDetails.picture}</p>
               {/* Ajoutez d'autres détails du client ici */}
+              <Image width='200' height='200' imageName={customerDetails.picture}></Image>
             </div>
           ) : (
             <p>Loading...</p>

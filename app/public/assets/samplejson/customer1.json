@@ -8,5 +8,6 @@
 	"country": "India",
 	"organization": "Company 1",
 	"jobProfile": "Software Developer",
-	"additionalInfo": "Has Bought a lot of products before and a high Value Customer"
+  "additionalInfo": "Has Bought a lot of products before and a high Value Customer",
+  "picture": "customer1.jpg"
 }
