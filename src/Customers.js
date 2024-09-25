@@ -23,6 +23,7 @@ export default class Customers extends Component {
     axios.get('assets/samplejson/customerlist.json').then(response => {
       this.setState({customerList: response})
     })
+    
   };
 
   render() {
@@ -39,7 +40,7 @@ export default class Customers extends Component {
             <Panel.Body>
               <p>{customer.email}</p>
               <p>{customer.phone}</p>
-              <Button bsStyle="info" onClick={() => this.setState({selectedCustomer: customer.id})}>
+              <Button bsStyle="info" onClick={() => this.setState({selectedCustomerId: customer.id})}>
 
                 Click to View Details
 
@@ -50,7 +51,7 @@ export default class Customers extends Component {
         }
       </div>
       <div className="col-md-6">
-        <CustomerDetails val={this.state.selectedCustomer}/>
+        <CustomerDetails val={this.state.selectedCustomerId}/>
       </div>
     </div>)
   }
